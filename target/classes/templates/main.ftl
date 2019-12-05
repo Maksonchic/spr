@@ -1,10 +1,13 @@
 <#import "parts/common.ftl" as c>
 <#import "parts/login.ftl" as l>
+<#include "parts/security.ftl">
 
 <@c.page>
 <div>
     <@l.logout />
-    <span><a href="/user">User list</a></span>
+    <#if isAdmin>
+        <span><a href="/user">User list</a></span>
+    </#if>
 </div>
 <div>
     <form method="post" enctype="multipart/form-data">
