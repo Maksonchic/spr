@@ -8,6 +8,9 @@
     <#if isAdmin>
         <span><a href="/user">User list</a></span>
     </#if>
+    <#if user??>
+        <span><a href="/user/profile">Profile</a></span>
+    </#if>
 </div>
 <div>
     <form method="post" enctype="multipart/form-data">
