@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="b0849321-a766-4ba6-8efd-4d9e5cf3df9f">
-        <schema name="db_example" object-types="dataset trigger, view, index, table, constraint, function, procedure, column" />
+        <schema name="db_example" object-types="view, function, table" />
       </connection>
     </loaded-nodes>
   </component>
@@ -36,7 +36,8 @@ INSERT INTO sequence VALUES (0);
 UPDATE sequence SET id=LAST_INSERT_ID(id+1);
 SELECT LAST_INSERT_ID();
 
-select * from sequence;]]></console>
+select * from db_example.message;
+select * from db_example.user_role;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

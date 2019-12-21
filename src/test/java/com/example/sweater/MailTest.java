@@ -22,7 +22,7 @@ public class MailTest {
         mailSender.send(
                 "maksimka-2580@mail.ru",
                 "test",
-                "If you see it, that you win!)))"
+                "If you see it, that you win!))) http://localhost:8080"
         );
     }
 }

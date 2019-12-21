@@ -15,6 +15,13 @@
 <div>
     <form method="post" enctype="multipart/form-data">
         <input type="text" name="text" placeholder="Введите сообщение" />
+        <#assign
+            user = Session.SPRING_SECURITY_CONTEXT.authentication.principal
+        >
+        <div>${textError?ifExists}</div>
+        <#if textError??>
+            <div>${textError}</div>
+        </#if>
         <input type="text" name="tag" placeholder="Тэг">
         <input type="file" name="file">
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
